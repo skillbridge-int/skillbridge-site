@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkillBridge International</title>
+<meta name="description" content="SkillBridge International: courses, teachers and books.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+
+<section class="hero"><div class="wrap">
+  <div><h1 data-i18n="hero_title"></h1><p data-i18n="hero_text"></p>
+  <div class="ctas"><a class="btn" href="courses.html" data-i18n="cta_courses"></a><a class="btn alt" href="books.html" data-i18n="cta_books"></a></div></div>
+  <ul class="lattice" id="lat"></ul>
+</div></section>
+<section class="sec"><div class="wrap"><div class="sechead"><h2 data-i18n="sec_courses"></h2><a href="courses.html" data-i18n="all_courses"></a></div><div id="courses"></div></div></section>
+<section class="sec alt"><div class="wrap"><h2 data-i18n="sec_how" style="margin-bottom:18px"></h2>
+<ol class="steps"><li><h3 data-i18n="step1_t"></h3><p data-i18n="step1_p"></p></li><li><h3 data-i18n="step2_t"></h3><p data-i18n="step2_p"></p></li><li><h3 data-i18n="step3_t"></h3><p data-i18n="step3_p"></p></li></ol></div></section>
+<section class="sec"><div class="wrap"><div class="sechead"><h2 data-i18n="sec_teachers"></h2><a href="teachers.html" data-i18n="all_teachers"></a></div><div id="teachers"></div></div></section>
+<section class="sec alt"><div class="wrap"><div class="sechead"><h2 data-i18n="sec_books"></h2><a href="books.html" data-i18n="all_books"></a></div><div id="books"></div></div></section>
+
+</main>
+<div id="ftr"></div>
+<script src="assets/app.js"></script>
+<script src="assets/pages.js"></script>
+<script>
+SB.mount('');
+var L=document.getElementById('lat');
+[['courses.html','lat_courses'],['teachers.html','lat_teachers'],['books.html','lat_books'],['#how','lat_how'],[SB.CFG.PORTAL,'lat_portal'],['#contact','lat_contact']].forEach(function(x){
+  L.appendChild(SB.el('li',null,SB.el('a',{href:x[0],text:SB.t(x[1])})));});
+document.querySelector('.steps').parentNode.parentNode.id='how';
+SBPages.loadCourses(document.getElementById('courses'),4);
+SBPages.loadTeachers(document.getElementById('teachers'),4);
+SBPages.loadBooks(document.getElementById('books'),4);
+</script>
+</body>
+</html>
