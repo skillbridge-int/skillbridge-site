@@ -258,3 +258,60 @@ h1,h2,h3{font-weight:700}
 .form .opt:has(input[name=pm]:focus-visible){outline:3px solid var(--saffron);outline-offset:2px}
 .btn{border-radius:11px}
 @media(max-width:820px){.nav{top:100%}}
+
+/* =====================================================================
+   v5 — the whole site on the dark blue dotted ground of the hero;
+   every divider, border and rule in saffron
+   ===================================================================== */
+:root{
+  --ink:#e3ecf8;--muted:#a9bcd6;--paper:#0f2447;
+  --line:rgba(232,161,58,.55);--white:rgba(255,255,255,.045);--sky:rgba(44,109,180,.28);
+  --glass:rgba(255,255,255,.05);--glass2:rgba(255,255,255,.08);--panel:#13305a;
+}
+body{color:var(--ink);background-color:#0f2447;
+  background-image:radial-gradient(rgba(255,255,255,.09) 1.4px,transparent 1.5px),
+    radial-gradient(circle at 85% 10%,rgba(44,109,180,.35),transparent 40%),
+    radial-gradient(circle at 10% 60%,rgba(232,161,58,.08),transparent 35%),
+    linear-gradient(180deg,#0f2447 0,#132d55 50%,#0f2447 100%);
+  background-size:26px 26px,100% 100%,100% 100%,100% 100%}
+main h1,main h2,main h3,.sheet h2,.sheet h3{color:#fff}
+a{color:#8cc4f5}
+.hero-wave{display:none}
+.hero{border-bottom:2px solid var(--saffron)}
+.sec.alt{background:var(--glass);border-block:1px solid var(--line)}
+.sechead a{color:#8cc4f5}
+
+/* lists and cards on the dark ground */
+.quick a{background:rgba(18,40,74,.92);color:#fff;border:1px solid var(--line);box-shadow:0 10px 26px rgba(0,0,0,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.quick a:hover{border-color:var(--saffron);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.crow{background:var(--glass);border:1px solid var(--line);box-shadow:none}
+.crow:hover{background:var(--glass2);border-color:var(--saffron);box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.cprice b,.tot{color:#fff}
+.tfig .tpic{box-shadow:0 0 0 4px #0f2447,0 0 0 6px var(--saffron)}
+.fmt{background:var(--glass);border-color:var(--line)}
+.steps li{border-top-color:var(--saffron)}
+.steps li::before{background:var(--saffron);color:var(--navy)}
+.notice{border-color:var(--line);color:var(--muted)}
+.cta{border:1px solid var(--line)}
+.pagehead{border-bottom:2px solid var(--saffron)}
+.foot{background:rgba(8,20,40,.55)}
+
+/* dialog */
+.modal{background:rgba(5,12,26,.75)}
+.sheet{background:var(--panel);color:var(--ink);border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.opt{border-color:var(--line)}
+.opt:has(input:checked){border-color:var(--saffron);background:var(--sky)}
+.btn.line{color:#fff;border-color:rgba(255,255,255,.7)}.btn.line:hover{background:rgba(255,255,255,.1)}
+
+/* forms, cart and order */
+input[type=text],input[type=tel],input[type=email],input[type=number],textarea,select{background:rgba(255,255,255,.06);color:#fff;border-color:var(--line)}
+input::placeholder,textarea::placeholder{color:#8aa0bf}
+input:focus,textarea:focus,select:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,161,58,.25)}
+input[type=file]{color:var(--muted)}
+label.f{color:#fff}
+.form .opt:has(input[name=pm]){background:var(--glass);border-color:var(--line);color:#fff}
+.summary,.panel{background:var(--glass);border-color:var(--line)}
+.line-item{border-bottom-color:var(--line)}
+.line-item .x,.err{color:#ff9c8f}
+.paybox{background:var(--sky);border:1px solid var(--line)}
+.badge{color:var(--navy)}
