@@ -73,7 +73,7 @@
   };
 
   /* ---------------------------------------------------------------- language */
-  var lang = 'ar';
+  var lang = 'en';   // default language for first-time visitors; the switch saves their choice
   try { var s = localStorage.getItem('sb_lang'); if (s === 'en' || s === 'ar') lang = s; } catch (e) {}
   function t(k) { return (T[lang] && T[lang][k]) || T.en[k] || k; }
   function setLang(l) { try { localStorage.setItem('sb_lang', l); } catch (e) {} location.reload(); }
